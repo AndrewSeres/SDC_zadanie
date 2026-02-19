@@ -15,6 +15,7 @@ public class App {
 
     public static void main(String[] args) {
         if (args.length != 1) {
+            logger.error("Expected exactly one argument: <path-to-excel-file>");
             System.exit(1);
         }
 
@@ -39,7 +40,7 @@ public class App {
                 }
             }
         } catch (Exception e) {
-            logger.error("An unexpected error occurred during procesing: ", e);
+            logger.error("An unexpected error occurred during processing: ", e);
             System.exit(1);
         }
     }
